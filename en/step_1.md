@@ -1,59 +1,28 @@
-## Introduction
+In the Inspector window for the GameObject, click ‘Add Component’ and choose ‘New script’ then give your script a sensible name.
 
-Add project description here. What will learners be making? Broadly what skills will they be learning?
+Double-click on your new script to open it in the code editor.
 
-### What you will make
+Create a variable to control the 'spinSpeed' 
 
---- no-print ---
-Add instructions for interacting with the embedded content here.
+```
+float spinSpeed = 5.0f; //Change this number to spin faster or slower
+```
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
+Add code to spin your GameObject:
 
---- print-only ---
-![Complete project](images/showcase_static.png)
---- /print-only ---
+```
+// Update is called once per frame
+void Update()
+{
+    transform.Rotate(Vector3.up * spinSpeed); // rotate about the Y (up) axis
+}
+```
 
---- collapse ---
----
-title: What you will need
----
-### Hardware
+You can rotate about the X, Y, or Z axes by amending the direction in your code:
++ Vector3.right / Vector3.left = Rotation about the X axis
++ Vector3.up / Vector3.down = Rotation about the Y axis
++ Vector3.forward / Vector3.back = Rotation about the Z axis
 
-+ A computer or tablet capable of running Scratch 3
+![The Game view showing a hear GameObject spinning about it's Y axis.](images/spinning-heart.gif)
 
-### Software
-
-+ Scratch 3 (either [online](https://scratch.mit.edu/){:target="_blank"} or [offline](https://scratch.mit.edu/download){:target="_blank"})
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
-
-### Downloads
-
-+ Download the project [starter file](http://rpf.io/p/en/projectName-go){:target="_blank"} if working offline
-
---- /collapse ---
-
---- collapse ---
----
-title: What you will learn
----
-
-+ Learning objective 1
-+ Learning objective 2
-+ Learning objective 3
-
---- /collapse ---
-
---- collapse ---
----
-title: Additional information for educators
----
-
-You can download the completed project [here](http://rpf.io/p/en/projectName-get){:target="_blank"}.
-
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/projectName/print){:target="_blank"}.
-
---- /collapse ---
+**Tip:** If you have added a 'Particle System' to your GameObject change the 'Simulation Space' property in the Inspector window to `World` so that it does not spin with your GameObject.
