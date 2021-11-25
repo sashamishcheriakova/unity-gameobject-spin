@@ -1,23 +1,20 @@
 ![The Game view showing a hear GameObject spinning about it's Y axis.](images/spinning-heart.gif)
 
-In the Inspector window for the GameObject, click ‘Add Component’ and choose ‘New script’ then give your script a sensible name.
+In the Inspector window for the GameObject, click ‘Add Component’ and choose ‘New script’ then give your script a sensible name (for example 'ItemController').
 
 Double-click on your new script to open it in the code editor.
 
-Create a variable to control the 'spinSpeed' 
+Create a variable to control the 'spinSpeed' and code to spin your GameObject:
 
 ```
-float spinSpeed = 5.0f; //Change this number to spin faster or slower
-```
+    public float spinSpeed = 5.0f; 
 
-Add code to spin your GameObject:
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Rotate(Vector3.forward * spinSpeed); //you can also spin backward, up, down, left and right
+    }
 
-```
-// Update is called once per frame
-void Update()
-{
-    transform.Rotate(Vector3.up * spinSpeed); // rotate about the Y (up) axis
-}
 ```
 
 You can rotate about the X, Y, or Z axes by amending the direction in your code:
