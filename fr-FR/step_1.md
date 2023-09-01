@@ -1,10 +1,10 @@
-![The Game view showing a hear GameObject spinning about it's Y axis.](images/spinning-heart.gif)
+![La vue Game montrant un GameObject tournant autour de son axe Y.](images/spinning-heart.gif)
 
-In the Inspector window for the GameObject, click ‘Add Component’ and choose ‘New script’ then give your script a sensible name (for example 'ItemController').
+Dans la fenêtre Inspector pour le GameObject, clique sur « Add Component » et choisis « New script », puis donne à ton script un nom approprié (par exemple « ItemController »).
 
-Double-click on your new script to open it in the code editor.
+Double-clique sur ton nouveau script pour l'ouvrir dans l'éditeur de code.
 
-Create a variable to control the 'spinSpeed' and code to spin your GameObject:
+Crée une variable pour contrôler la « vitesserotation » et le code pour faire tourner ton GameObject :
 
 --- code ---
 ---
@@ -21,9 +21,9 @@ language: cs
 
 --- /code ---
 
-You can rotate about the X, Y, or Z axes by amending the direction in your code:
-+ Vector3.right / Vector3.left = Rotation about the X axis
-+ Vector3.up / Vector3.down = Rotation about the Y axis
-+ Vector3.forward / Vector3.back = Rotation about the Z axis
+Tu peux effectuer une rotation sur les axes X, Y ou Z en modifiant la direction dans ton code :
++ Vector3.right / Vector3.left = Rotation sur l'axe X
++ Vector3.up / Vector3.down = Rotation sur l'axe Y
++ Vector3.forward / Vector3.back = Rotation sur l'axe Z
 
-**Tip:** If you have added a 'Particle System' to your GameObject change the 'Simulation Space' property in the Inspector window to `World` so that it does not spin with your GameObject.
+**Astuce :** si tu as ajouté un « Particle System » à ton GameObject, modifie la propriété « Simulation Space » dans la fenêtre Inspector en `World` afin qu'il ne tourne pas avec ton GameObject.
